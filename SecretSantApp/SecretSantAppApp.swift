@@ -1,32 +1,29 @@
+
 //
 //  SecretSantAppApp.swift
 //  SecretSantApp
 //
-//  Created by Blas Gimeno on 02/11/2026.
-//
 
 import SwiftUI
 import SwiftData
+import GoogleSignIn
 
 @main
 struct SecretSantAppApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
-
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GroupListView()
+                .onOpenURL { url in
+                    GIDSignIn.sharedInstance.handle(url)
+                }
+                .preferredColorScheme(.light)
         }
-        .modelContainer(sharedModelContainer)
+        // Todo se guarda en local con SwiftData
+        .modelContainer(for: [
+            Group.self,
+            Person.self,
+            Draw.self,
+            Gift.self
+        ])
     }
 }
