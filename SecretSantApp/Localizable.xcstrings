@@ -1891,6 +1891,97 @@
         }
       }
     },
+    "settings.donations.description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Enjoying the app? Leave an optional tip to support its development." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "¿Te gusta la app? Puedes dejar una propina opcional para apoyar su desarrollo." } }
+      }
+    },
+    "settings.donations.error_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Donation unavailable" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "No se pudo completar la donación" } }
+      }
+    },
+    "settings.donations.load_error" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Could not load donation options. Please try again." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "No se pudieron cargar las opciones. Inténtalo de nuevo." } }
+      }
+    },
+    "settings.donations.loading" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Loading donation options…" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Cargando opciones de donación…" } }
+      }
+    },
+    "settings.donations.pending_message" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "The purchase is awaiting approval." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "La compra está pendiente de aprobación." } }
+      }
+    },
+    "settings.donations.pending_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Purchase pending" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Compra pendiente" } }
+      }
+    },
+    "settings.donations.purchase_error" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "The purchase could not be completed. Please try again." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "No se pudo completar la compra. Inténtalo de nuevo." } }
+      }
+    },
+    "settings.donations.retry" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Try again" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Volver a intentarlo" } }
+      }
+    },
+    "settings.donations.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Support the app" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Apoya la app" } }
+      }
+    },
+    "settings.donations.thank_you_message" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Your support helps keep this app going. Thank you!" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Tu apoyo ayuda a que la app siga adelante. ¡Muchas gracias!" } }
+      }
+    },
+    "settings.donations.thank_you_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Thank you!" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "¡Muchas gracias!" } }
+      }
+    },
+    "settings.donations.unavailable" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Donation options are not available right now." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Las opciones de donación no están disponibles ahora." } }
+      }
+    },
+    "settings.donations.verify_error" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "The purchase could not be verified." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "No se pudo verificar la compra." } }
+      }
+    },
     "settings.google_account" : {
       "extractionState" : "manual",
       "localizations" : {

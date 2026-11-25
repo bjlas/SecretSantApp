@@ -1,9 +1,11 @@
 import SwiftUI
 import GoogleSignInSwift
+import StoreKit
 
 
 struct SettingsView: View {
     @StateObject private var googleAuth = GoogleAuthManager()
+    @StateObject private var donationStore = DonationStore()
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
@@ -103,6 +105,46 @@ struct SettingsView: View {
                     }
                             }
                         }
+
+                        FormSectionCard {
+                            VStack(alignment: .leading, spacing: 14) {
+                                FormSectionHeading(
+                                    title: "settings.donations.title",
+                                    subtitle: "settings.donations.description"
+                                )
+
+                                if donationStore.isLoading && donationStore.products.isEmpty {
+                                    ProgressView("settings.donations.loading")
+                                        .frame(maxWidth: .infinity, alignment: .leading)
+                                } else if donationStore.products.isEmpty {
+                                    VStack(alignment: .leading, spacing: 10) {
+                                        Text("settings.donations.unavailable")
+                                            .font(.subheadline)
+                                            .foregroundStyle(.secondary)
+                                        Button("settings.donations.retry") {
+                                            Task { await donationStore.loadProducts() }
+                                        }
+                                        .buttonStyle(.bordered)
+                                    }
+                                } else {
+                                    ForEach(donationStore.products, id: \.id) { product in
+                                        Button {
+                                            Task { await donationStore.purchase(product) }
+                                        } label: {
+                                            HStack {
+                                                Text(product.displayName)
+                                                Spacer()
+                                                Text(product.displayPrice)
+                                                    .fontWeight(.semibold)
+                                            }
+                                            .frame(maxWidth: .infinity)
+                                        }
+                                        .buttonStyle(.borderedProminent)
+                                        .tint(Color.accent)
+                                    }
+                                }
+                            }
+                        }
                     }
                     .padding(.horizontal, 20)
                     .padding(.top, 12)
@@ -136,6 +178,16 @@ struct SettingsView: View {
                 Button("common.ok", role: .cancel) { googleAuth.errorMessage = nil }
             } message: {
                 Text(LocalizedStringKey(googleAuth.errorMessage ?? "settings.unknown_error"))
+            }
+            .alert(item: $donationStore.alert) { alert in
+                Alert(
+                    title: Text(alert.title),
+                    message: Text(alert.message),
+                    dismissButton: .default(Text("common.ok"))
+                )
+            }
+            .task {
+                await donationStore.loadProducts()
             }
         }
     }
