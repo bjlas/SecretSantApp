@@ -1,59 +1,129 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Política de privacidad - SecretSantApp</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            line-height: 1.7;
-            color: #333;
-        }
-        h1, h2 { color: #222; }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Política de privacidad de Secret Sant App.">
+  <title>Política de privacidad · Secret Sant App</title>
+  <style>
+    :root { color-scheme: light; --ink:#20241f; --muted:#626b63; --green:#245c43; --paper:#fff; --wash:#f3f6f2; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--wash); color:var(--ink); font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    main { max-width:820px; margin:40px auto; padding:clamp(24px,5vw,56px); background:var(--paper); border-radius:20px; box-shadow:0 12px 40px #15291c12; }
+    h1,h2 { line-height:1.25; }
+    h1 { color:var(--green); font-size:clamp(2rem,5vw,2.8rem); margin:0 0 8px; }
+    h2 { margin:32px 0 10px; font-size:1.25rem; }
+    p,ul { margin:10px 0; }
+    li { margin:6px 0; }
+    .date,.intro { color:var(--muted); }
+    a { color:var(--green); }
+    footer { margin-top:36px; padding-top:18px; border-top:1px solid #e5eae5; color:var(--muted); font-size:.92rem; }
+    @media(max-width:600px) { main { margin:0; border-radius:0; min-height:100vh; } }
+  </style>
 </head>
 <body>
+<main>
+  <nav aria-label="Language / Idioma"><a href="#es">Castellano</a> · <a href="#en" lang="en">English</a></nav>
+  <section id="es" lang="es">
+  <header>
+    <h1>Política de privacidad</h1>
+    <p class="intro">Secret Sant App</p>
+    <p class="date">Última actualización: 26 de noviembre de 2026</p>
+  </header>
 
-<h1>Política de privacidad - SecretSantApp</h1>
-<p>Última actualización: 26 de noviembre de 2026</p>
+  <p>Esta política explica qué información se utiliza cuando usas Secret Sant App, una aplicación para organizar sorteos de amigo invisible, y qué ocurre cuando eliges funciones opcionales como importar un contacto, enviar avisos con Gmail o realizar una aportación.</p>
 
-<h2>1. Responsable</h2>
-<p>SecretSantApp es una aplicación desarrollada por
-[NOMBRE DEL DESARROLLADOR].</p>
-<p>Contacto: [CORREO ELECTRÓNICO]</p>
+  <h2>Responsable</h2>
+  <p>El responsable del tratamiento es <strong>bjlas</strong>. Para consultas o solicitudes relacionadas con privacidad, escribe a: <strong>bjlas@hotmail.com</strong>.</p>
 
-<h2>2. Información utilizada</h2>
-<p>La aplicación permite organizar sorteos de Amigo Invisible.
-Los usuarios pueden introducir nombres de participantes y
-crear grupos para realizar los sorteos.</p>
+  <h2>Información que introduces y para qué se utiliza</h2>
+  <p>La aplicación permite guardar los datos que añades para organizar los grupos y sorteos, que pueden incluir:</p>
+  <ul>
+    <li>Nombre del grupo, presupuesto máximo y avatar elegido.</li>
+    <li>Nombre, teléfono, correo electrónico, preferencias de participación y restricciones de asignación de cada participante.</li>
+    <li>Fecha y resultados del sorteo, junto con el estado de los avisos enviados.</li>
+  </ul>
+  <p>Estos datos se usan para gestionar los grupos, generar asignaciones y preparar o enviar los avisos que solicites. La aplicación no requiere crear una cuenta propia.</p>
 
-<h2>3. Almacenamiento de información</h2>
-<p>La información se almacena localmente en el dispositivo,
-siempre que esta sea la única forma de almacenamiento
-utilizada por la aplicación.</p>
+  <h2>Almacenamiento y conservación</h2>
+  <p>Los grupos, participantes y sorteos se almacenan localmente en el dispositivo mediante SwiftData. El código de la aplicación no envía estos datos a un servidor propio ni los sincroniza con una cuenta del desarrollador. Permanecen en el dispositivo hasta que los elimines en la aplicación o borres sus datos al eliminar la aplicación. Las copias de seguridad del dispositivo pueden estar sujetas a los ajustes y servicios de Apple que hayas activado.</p>
 
-<h2>4. Compartir información</h2>
-<p>Si el usuario decide compartir los resultados mediante
-las herramientas de su dispositivo, esa acción se realiza
-por iniciativa del propio usuario.</p>
+  <h2>Importar desde Contactos</h2>
+  <p>Si eliges importar a una persona, se abre el selector de contactos de Apple. Solo se incorporan a la ficha los datos del contacto que el selector proporciona y que la aplicación utiliza: nombre, primer teléfono y primer correo disponibles. La aplicación no carga ni copia tu agenda completa; los datos seleccionados se guardan localmente como parte del participante.</p>
 
-<h2>5. Compras integradas</h2>
-<p>La aplicación puede ofrecer aportaciones voluntarias
-mediante Apple StoreKit. Los pagos son gestionados
-por Apple.</p>
+  <h2>Emails y cuenta de Google</h2>
+  <p>Conectar Google es opcional. Si lo haces, Google Sign-In proporciona a la aplicación la información de cuenta necesaria, como tu dirección de correo, y administra la sesión y credenciales de autenticación. Si además autorizas el permiso <code>gmail.send</code>, la aplicación puede enviar, a petición tuya, los avisos del sorteo a los participantes mediante la API de Gmail. Para realizar el envío se transmiten a Google/Gmail la dirección del destinatario y el contenido del mensaje, que puede incluir nombres, el resultado del sorteo y el presupuesto máximo.</p>
+  <p>La aplicación solicita permiso para enviar mensajes; no solicita acceso para leer tu bandeja de entrada. Google procesa la autenticación y los envíos conforme a sus propias condiciones y política de privacidad. Puedes retirar el acceso desde los ajustes de tu cuenta de Google y desconectar la cuenta desde la aplicación.</p>
+  <p>Si no conectas Gmail, puedes elegir abrir Mail para enviar un correo o Mensajes para enviar un SMS. En esos casos, el sistema abre la aplicación correspondiente con el destinatario y el texto preparados; tú revisas y confirmas el envío. Apple y el proveedor de mensajería aplicable procesan esos datos según sus propias políticas. Tu operador puede cobrar por los SMS.</p>
 
-<h2>6. Seguridad y conservación</h2>
-<p>La información local está sujeta a las medidas de
-seguridad del dispositivo del usuario.</p>
+  <h2>Compras y aportaciones</h2>
+  <p>La aplicación ofrece aportaciones opcionales procesadas mediante StoreKit/App Store. El desarrollador no recibe los datos de tu tarjeta ni procesa directamente el pago. Apple puede recibir información de compra y transacción de acuerdo con sus condiciones y política de privacidad.</p>
 
-<h2>7. Contacto</h2>
-<p>Para consultas relacionadas con la privacidad:</p>
-<p>[CORREO ELECTRÓNICO]</p>
+  <h2>Analítica, publicidad y venta de datos</h2>
+  <p>La aplicación no incluye en el código revisado herramientas de analítica, publicidad o seguimiento entre aplicaciones, y el desarrollador no vende los datos personales que introduces en ella.</p>
 
+  <h2>Menores</h2>
+  <p>La aplicación no está dirigida específicamente a menores ni solicita datos de menores como requisito. Quien organiza un grupo debe contar con autorización adecuada para introducir los datos de contacto de otras personas y compartir con ellas sus resultados.</p>
+
+  <h2>Seguridad y derechos</h2>
+  <p>Al almacenarse los datos del sorteo en el dispositivo, protege el acceso al dispositivo y elimina de la aplicación la información que ya no necesites. Puedes solicitar información, rectificación o eliminación de datos personales escribiendo al contacto indicado arriba. Para los datos almacenados exclusivamente en tu dispositivo, puedes modificarlos o eliminarlos directamente en la aplicación.</p>
+
+  <h2>Cambios en esta política</h2>
+  <p>Esta política podrá actualizarse si cambian la aplicación o sus prácticas. La versión vigente indicará su fecha de actualización.</p>
+
+  </section>
+
+  <hr style="margin:48px 0;border:0;border-top:1px solid #e5eae5">
+
+  <section id="en" lang="en">
+  <header>
+    <h1>Privacy Policy</h1>
+    <p class="intro">Secret Sant App</p>
+    <p class="date">Last updated: November 26, 2026</p>
+  </header>
+
+  <p>This policy explains what information is used when you use Secret Sant App, an app for organizing Secret Santa draws, and what happens when you choose optional features such as importing a contact, sending notifications with Gmail, or making a contribution.</p>
+
+  <h2>Data controller</h2>
+  <p>The data controller is <strong>bjlas</strong>. For privacy questions or requests, contact: <strong>bjlas@hotmail.com</strong>.</p>
+
+  <h2>Information you provide and how it is used</h2>
+  <p>The app lets you save information you enter to organize groups and draws, which may include:</p>
+  <ul>
+    <li>Group name, maximum budget, and selected avatar.</li>
+    <li>Each participant's name, phone number, email address, participation preferences, and assignment restrictions.</li>
+    <li>Draw date and results, together with the status of notifications sent.</li>
+  </ul>
+  <p>This information is used to manage groups, generate assignments, and prepare or send notifications you request. The app does not require you to create an account with the developer.</p>
+
+  <h2>Storage and retention</h2>
+  <p>Groups, participants, and draws are stored locally on your device using SwiftData. The app's code does not send this information to a server operated by the developer or sync it with a developer account. It remains on your device until you delete it in the app or erase the app's data by deleting the app. Device backups may be subject to the Apple settings and services you have enabled.</p>
+
+  <h2>Importing from Contacts</h2>
+  <p>If you choose to import a person, Apple's contact picker opens. Only the selected contact details made available by the picker and used by the app are added: name, first available phone number, and first available email address. The app does not upload or copy your entire address book; selected details are stored locally as part of the participant record.</p>
+
+  <h2>Email and Google account</h2>
+  <p>Connecting Google is optional. If you do, Google Sign-In provides the account information needed by the app, such as your email address, and manages the sign-in session and authentication credentials. If you also authorize the <code>gmail.send</code> permission, the app can send draw notifications to participants through the Gmail API at your request. To send them, the recipient's email address and message content are transmitted to Google/Gmail. The message may include names, draw results, and the maximum budget.</p>
+  <p>The app requests permission to send messages; it does not request access to read your inbox. Google processes authentication and email delivery under its own terms and privacy policy. You can revoke access in your Google Account settings and disconnect the account in the app.</p>
+  <p>If you do not connect Gmail, you can choose to open Mail to send an email or Messages to send an SMS. In these cases, the system opens the relevant app with the recipient and message prepared; you review and confirm the send. Apple and the applicable messaging provider process that information under their own policies. Your carrier may charge for SMS messages.</p>
+
+  <h2>Purchases and contributions</h2>
+  <p>The app offers optional contributions processed through StoreKit/App Store. The developer does not receive your payment card details or process the payment directly. Apple may receive purchase and transaction information under its terms and privacy policy.</p>
+
+  <h2>Analytics, advertising, and sale of data</h2>
+  <p>The code reviewed for this app does not include analytics, advertising, or cross-app tracking tools, and the developer does not sell the personal information you enter in the app.</p>
+
+  <h2>Children</h2>
+  <p>The app is not specifically directed to children and does not require children's information. Anyone organizing a group should have appropriate authorization to enter other people's contact details and share draw results with them.</p>
+
+  <h2>Security and your rights</h2>
+  <p>Because draw information is stored on your device, protect access to your device and delete information from the app when you no longer need it. You may request access, correction, or deletion of personal information by contacting the address above. Information stored only on your device can be edited or deleted directly in the app.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>This policy may be updated if the app or its practices change. The current version will show its update date.</p>
+  </section>
+
+  <footer>Secret Sant App · Política de privacidad / Privacy Policy · 26 November 2026</footer>
+</main>
 </body>
 </html>
